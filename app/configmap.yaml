@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-site
+  namespace: nginx
+data:
+  index.html: |
+    <!doctype html>
+    <html>
+      <head><title>Teleport take-home</title></head>
+      <body>
+        <h1>Static site on kubeadm</h1>
+        <p>Deployed by user <code>deployer</code> via RBAC-scoped access.</p>
+      </body>
+    </html>
