@@ -1,0 +1,13 @@
+*.key
+*.csr
+*.crt
+*.pem
+*.kubeconfig
+admin.conf
+
+get_helm.sh
+
+# macOS / editor noise
+.DS_Store
+*.swp
+*~

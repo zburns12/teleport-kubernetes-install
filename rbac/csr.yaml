@@ -3,7 +3,7 @@ kind: CertificateSigningRequest
 metadata:
   name: deployer
 spec:
-  request: INSERT VALUE
+  request: ""
   signerName: kubernetes.io/kube-apiserver-client
   expirationSeconds: 2592000 # thirty days
   usages:
