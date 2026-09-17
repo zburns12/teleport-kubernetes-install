@@ -5,9 +5,9 @@ Every file created or modified with AI assistance is listed below with the degre
 I used Claude for this assignment. I ran all commands myself and used the model as a guide, reviewer, and to generate boilerplate. All cluster work was performed by me on my own machine.
 
 Degree scale:
-- **Generated**: AI wrote the file; I reviewed and edited.
-- **Assisted**: I wrote it; AI provided boilerplate or suggested corrections.
-- **None**: no AI involvement.
+- **Generated**: AI wrote the file and I reviewed and edited
+- **Assisted**: I wrote the file and AI provided boilerplate or suggested corrections
+- **None**
 
 | File                          | Degree    | Notes                                                                                                           |
 | ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
