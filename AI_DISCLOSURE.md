@@ -12,7 +12,7 @@ Degree scale:
 | File                          | Degree    | Notes                                                                                                           |
 | ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
 | `.gitignore`                  | None      |                                                                                                                 |
-| `README.md`                   | None      |                                                                                                                 |
+| `README.md`                   | Assisted  | AI ensured I captured all steps clearly                                                                         |
 | `AI_DISCLOSURE.md`            | None      |                                                                                                                 |
 | `infra/cloud-init.yaml`       | Generated | Manual node preparation steps.                                                                                  |
 | `infra/launch.sh`             | Assisted  | Multipass commands were AI. VM names, sizing, and approach chosen by me.                                        |

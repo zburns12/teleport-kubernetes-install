@@ -102,7 +102,7 @@ NodePort, with ports pinned so they survive reinstall:
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
 helm install ingress-nginx ingress-nginx/ingress-nginx \
-  --version <CHART_VERSION> \
+  --version 4.15.1 \
   --namespace ingress-nginx --create-namespace \
   --set controller.service.type=NodePort \
   --set controller.service.nodePorts.http=30080 \
@@ -116,7 +116,7 @@ kubectl -n ingress-nginx get svc,pods
 helm repo add jetstack https://charts.jetstack.io
 helm repo update
 helm install cert-manager jetstack/cert-manager \
-  --version <CHART_VERSION> \
+  --version v1.21.2 \
   --namespace cert-manager --create-namespace \
   --set crds.enabled=true
 kubectl -n cert-manager get pods
