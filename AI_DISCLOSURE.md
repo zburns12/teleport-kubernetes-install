@@ -11,9 +11,9 @@ Degree scale:
 
 | File                          | Degree    | Notes                                                                                                           |
 | ----------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
-| `.gitignore`                  | None      |                                                                                                                 |
+| `.gitignore`                  | Generated | Generated the common values for the file                                                                        |
 | `README.md`                   | Assisted  | AI ensured I captured all steps clearly                                                                         |
-| `AI_DISCLOSURE.md`            | None      |                                                                                                                 |
+| `AI_DISCLOSURE.md`            | Assisted  | Provided structure for file                                                                                     |
 | `infra/cloud-init.yaml`       | Generated | Manual node preparation steps.                                                                                  |
 | `infra/launch.sh`             | Assisted  | Multipass commands were AI. VM names, sizing, and approach chosen by me.                                        |
 | `cluster/kubeadm-config.yaml` | Generated | AI proposed using a config file. I chose the CIDR and hostname convention.                                      |

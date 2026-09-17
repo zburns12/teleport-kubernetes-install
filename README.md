@@ -1,25 +1,25 @@
 # Kubernetes (kubeadm) + RBAC-scoped Nginx deployment
 
-Take-home for the Teleport Customer Solutions interview. A three-node kubeadm cluster
-(one control plane, two workers) running as Multipass VMs on macOS, with a static Nginx
+A three-node kubeadm cluster (one control plane, two workers) running as Multipass VMs on macOS, with a static Nginx
 site deployed by a certificate-authenticated user whose access is limited to one namespace.
 
 See `docs/DESIGN.md` for approach and tradeoffs.
 
 ## Stack
 
-| Component    | Version                      | Notes                                        |
-| ------------ | ---------------------------- | -------------------------------------------- |
-| Ubuntu       | 24.04 (Multipass image)      | arm64 on Apple Silicon                       |
-| containerd   | Ubuntu 24.04 package (1.7.x) | `SystemdCgroup = true`                       |
-| Kubernetes   | v1.36.4                      | kubeadm / kubelet / kubectl, pinned and held |
-| Cilium       | chart 1.20.1                 | CNI; kube-proxy left in place                |
-| cert-manager | v1.21.1                      | TLS for the Nginx site                       |
-| Nginx        | 1.15.1                       | static site                                  |
+| Component     | Version                        | Notes                                        |
+| ------------- | ------------------------------ | -------------------------------------------- |
+| Ubuntu        | 24.04 (Multipass image)        | arm64 on Apple Silicon                       |
+| containerd    | Ubuntu 24.04 package (1.7.x)   | `SystemdCgroup = true`                       |
+| Kubernetes    | v1.36.4                        | kubeadm / kubelet / kubectl, pinned and held |
+| Cilium        | chart 1.20.1                   | CNI; kube-proxy left in place                |
+| cert-manager  | v1.21.1                        | TLS for the Nginx site                       |
+| Ingress-nginx | 1.15.1                         | Ingress controller                           |
+| Nginx         | nginx-unprivileged:1.29-alpine | Static site                                  |
 
 ## Prerequisites (Mac)
 
-- [Multipass](https://multipass.run/) (`brew install multipass`)
+- [Multipass][1] (`brew install multipass`)
 - `kubectl` matching the cluster minor (optional; you can run everything from `master`)
 
 ## Build
@@ -173,3 +173,5 @@ multipass delete master worker-1 worker-2 && multipass purge
 Disclosed per file in `AI_DISCLOSURE.md`, as required by the exercise.
 
 # teleport-kubernetes-install
+
+[1]:	https://multipass.run/
